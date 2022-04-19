@@ -8,8 +8,3 @@ for (let category of categories) {
     console.log(`Category: ${category.firstElementChild.textContent}`);
     console.log(`Elements: ${category.lastElementChild.children.length}`) 
 }
-
-
-
-
-
