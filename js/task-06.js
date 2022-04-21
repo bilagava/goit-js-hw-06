@@ -1,4 +1,4 @@
-const inputEl = document.getElementById("validation-input");
+const inputEl = document.querySelector("#validation-input");
 
 const totalLenght = inputEl.getAttribute("data-length");
 const intTotalLenght = parseInt(totalLenght, 10);
