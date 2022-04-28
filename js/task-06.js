@@ -3,7 +3,7 @@ const inputEl = document.querySelector("#validation-input");
 const totalLenght = inputEl.getAttribute("data-length");
 const intTotalLenght = parseInt(totalLenght, 10);
 
-inputEl.oninput = function() {
+inputEl.onblur = function() {
     if (inputEl.value.length === intTotalLenght) {
         inputEl.classList.remove("invalid");
         inputEl.classList.add("valid");

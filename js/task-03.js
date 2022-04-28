@@ -14,13 +14,16 @@ const images = [
 ];
 
 
+const createGalleryItem = ({ url, alt }) =>
+  `<li><img src="${url}" alt="${alt}" width = 230 height = 150></li>`;
+
+const itemMarkup = images.reduce((acc, item) =>
+  acc + createGalleryItem(item), "");
+
 const galleryEl = document.querySelector("ul.gallery");
+galleryEl.insertAdjacentHTML("afterbegin", itemMarkup);
 galleryEl.setAttribute("style", "list-style-type:none; display: flex;");
 
-images.forEach(function ({ url, alt }){
-  galleryEl.insertAdjacentHTML("afterbegin", `<li><img src="${url}" alt="${alt}" width = 230 height = 150></li>`); 
-})
 
-
-
+// console.log(galleryEl);
 
