@@ -8,16 +8,12 @@ function onFormSubmit(event) {
     const formData = new FormData(event.currentTarget)
     const userEmail = event.currentTarget.elements.email.value;
     const userPass = event.currentTarget.elements.password.value;
-   
-    formData.forEach((value, name) => {
-        
+
         if (userEmail === '' || userPass === '') {
-            alert('Все поля должны быть заполнены');
-            return
+            return alert('Все поля должны быть заполнены');
         } 
-        console.log({ name, value });
-        event.currentTarget.reset();  
-    });   
+    console.log({ userEmail, userPass });
+    form.reset();   
 }
 
 
